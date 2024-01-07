@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:http/http.dart';
-import 'package:intership_task/Api/ApiGet.dart';
+
 import 'package:intership_task/Api/ApiModel.dart';
 import 'package:shimmer/shimmer.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -16,7 +15,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   NewsViewModel newsViewModel = NewsViewModel();
-  List<ApiModel> _news = [];
+
 
   bool isLoading = true;
   var image =
@@ -79,15 +78,15 @@ class _HomePageState extends State<HomePage> {
                 return ListView.builder(
                     itemCount: data?.length,
                     itemBuilder: (context, index) {
-                      var title = data?[index].title;
-                      var time = data?[index].publishedAt;
+                      var title = data?[index].title??"";
+                      var time = data?[index].publishedAt??"";
                       var imageUrl = data?[index].urlToImage??image;
                       var newsUrl = data?[index].url;
-                      var author = data?[index].author;
+                      var author = data?[index].author??"";
 
                       return GestureDetector(
                         onTap: () async {
-                          launchUrl(newsUrl!);
+                          launchurl(newsUrl!);
                         },
                         child: Container(
                           //  margin: EdgeInsets.all(4),
@@ -180,17 +179,12 @@ class _HomePageState extends State<HomePage> {
       ),
     );
   }
-  void launchUrl(String url) async {
+  void launchurl(String url) async {
     try {
-      if (await canLaunch(url)) {
-        await launch(url);
-      } else {
-        throw 'Could not launch $url';
-      }
+      await launchUrl(Uri.parse(url));
     } catch (e) {
       print('Error launching URL: $e');
       showToast(context, "we are anable to open $url");
-      // Handle the error as needed, e.g., show a custom message.
     }
   }
 }

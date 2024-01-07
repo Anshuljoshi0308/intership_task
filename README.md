@@ -1,16 +1,30 @@
 # intership_task
+## Overview
+ This Flutter application is a single-page solution developed for the internship assignment with Eight 7 Financial Planner. The app leverages APIs to provide real-time financial data and the latest news in India, offering users a seamless and efficient experience
 
-A new Flutter project.
+## Features 
+* Single Page App: A simple and user-friendly layout designed for quick access to financial information and the latest news in India.
+ 
+* API Integration: Real-time data retrieval from financial APIs ensures users have up-to-date financial insights, while news APIs keep them informed about the latest happenings in India.
 
-## Getting Started
+# Usage
 
-This project is a starting point for a Flutter application.
+To run the app locally:
 
-A few resources to get you started if this is your first Flutter project:
+1. Clone this repository.
+2. Navigate to the project directory.
+3. Run flutter pub get to install dependencies.
+4. Connect a device or emulator.
+5. Run flutter run to launch the application
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Technology Stack 
+* Flutter: Cross-platform framework for building mobile applications.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+* APIs: Integration with financial APIs for dynamic data fetching and news APIs for the latest updates in India.
+## Source
+https://newsapi.org/
+## Contact
+For Connection, contact details :
+* [Anshul Josi] at [email](mailto:anshul8526@gmail.com),
+* [Linkedin](https://www.linkedin.com/in/-anshul-joshi/)
+

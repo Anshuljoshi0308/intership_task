@@ -47,7 +47,7 @@ dev_dependencies:
   # rules and activating additional ones.
   flutter_lints: ^2.0.0
   http:
-  url_launcher:
+  url_launcher: ^6.2.2
   shimmer:
 
 # For information on the generic Dart part of this file, see the
